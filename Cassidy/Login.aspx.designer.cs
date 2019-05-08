@@ -31,15 +31,6 @@ namespace Cassidy {
         protected global::System.Web.UI.WebControls.TextBox UserNameTB;
         
         /// <summary>
-        /// rfvUser control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvUser;
-        
-        /// <summary>
         /// PasswordTB control.
         /// </summary>
         /// <remarks>
@@ -47,15 +38,6 @@ namespace Cassidy {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PasswordTB;
-        
-        /// <summary>
-        /// RequiredFieldValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
         /// LoginBtn control.
