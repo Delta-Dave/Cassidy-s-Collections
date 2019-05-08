@@ -21,7 +21,7 @@ namespace Cassidy
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
             con.Open();
-            SqlCommand cmd = new SqlCommand("select * from UserInformation where UserName =@username and Password=@password", con);
+            SqlCommand cmd = new SqlCommand("select * from UserInformation where Username=@username and Password=@password", con);
             cmd.Parameters.AddWithValue("@username", UserNameTB.Text);
             cmd.Parameters.AddWithValue("@password", PasswordTB.Text);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -29,7 +29,7 @@ namespace Cassidy
             da.Fill(dt);
             if (dt.Rows.Count > 0)
             {
-                Response.Redirect("Details.aspx");
+                Response.Redirect("Profile.aspx");
             }
             else
             {

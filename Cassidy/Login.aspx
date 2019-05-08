@@ -12,11 +12,9 @@
     
     &nbsp; User Name:&nbsp;
         <asp:TextBox ID="UserNameTB" runat="server"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="rfvUser" ErrorMessage="Please enter Username" ControlToValidate="UserNameTB" runat="server" />
         <br />
 &nbsp;Password:&nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="PasswordTB" runat="server"></asp:TextBox>
-        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ErrorMessage="Please enter Username" ControlToValidate="PasswordTB" runat="server" />
         <br />
         <asp:Button ID="LoginBtn" runat="server" OnClick="LoginBtn_Click" Text="Login" />
     

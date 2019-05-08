@@ -12,7 +12,9 @@
         <div class="product">
             <asp:Image ID="Image1" runat="server" ImageUrl="2018-12-31.jpg" Width="200px" />
             <br />
-            This is a Product Label</div>
+            This is a Product Label
+
+        </div>
             
     </div>
     </form>
