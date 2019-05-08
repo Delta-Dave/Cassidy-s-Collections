@@ -18,14 +18,14 @@ namespace Cassidy
     {
         public void ProcessRequest(HttpContext context)
         {
-            Int32 empno;
+            Int32 pdtno;
             if (context.Request.QueryString["id"] != null)
-                empno = Convert.ToInt32(context.Request.QueryString["id"]);
+                pdtno = Convert.ToInt32(context.Request.QueryString["id"]);
             else
                 throw new ArgumentException("No parameter specified");
 
             context.Response.ContentType = "image/jpeg";
-            Stream strm = ShowEmpImage(empno);
+            Stream strm = ShowProductImage(pdtno);
             byte[] buffer = new byte[4096];
             int byteSeq = strm.Read(buffer, 0, 4096);
 
@@ -37,14 +37,14 @@ namespace Cassidy
         }
 
     //context.Response.BinaryWrite(buffer);
-    public Stream ShowEmpImage(int empno)
+    public Stream ShowProductImage(int pdtno)
     {
         string conn = ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString;
         SqlConnection connection = new SqlConnection(conn);
-        string sql = "SELECT empimg FROM Products WHERE ProductID = @ID";
+        string sql = "SELECT ProductImage FROM Products WHERE ProductID = @ID";
         SqlCommand cmd = new SqlCommand(sql, connection);
         cmd.CommandType = CommandType.Text;
-        cmd.Parameters.AddWithValue("@ID", empno);
+        cmd.Parameters.AddWithValue("@ID", pdtno);
         connection.Open();
         object img = cmd.ExecuteScalar();
         try

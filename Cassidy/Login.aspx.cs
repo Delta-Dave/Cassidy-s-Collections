@@ -29,9 +29,9 @@ namespace Cassidy
             da.Fill(dt);
             if (dt.Rows.Count > 0)
             {
-                Response.Redirect("Profile.aspx");
-
                 Session.Add("UserID", cmd.ExecuteScalar());
+
+                Response.Redirect("Profile.aspx");
             }
             else
             {
