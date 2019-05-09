@@ -98,9 +98,16 @@
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <Content Include="GenerateTables.sql" />
     <Content Include="HtmlPage1.html" />
     <Content Include="HtmlPage2.html" />
     <Content Include="Images\2018-12-31.jpg" />
+    <Content Include="Images\delta.JPG" />
+    <Content Include="Images\earth.JPG" />
+    <Content Include="Images\ice.JPG" />
+    <Content Include="Images\jack_and_jill.JPG" />
+    <Content Include="Images\landingpage.JPG" />
+    <Content Include="Images\logo1.png" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
