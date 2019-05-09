@@ -8,6 +8,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <asp:Label ID = "UserID" runat = "server"></asp:Label>
+
     <div class="products">
         <div class="product">
             <asp:Image ID="Image1" runat="server" ImageUrl="#" Width="200px" />
