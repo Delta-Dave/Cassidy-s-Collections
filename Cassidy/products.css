@@ -1,0 +1,15 @@
+﻿h1 {
+    font-family:Brush Script MT, Brush Script Std, cursive;
+    text-align: center;
+    color: white;
+    background-color: mediumpurple;
+    border: 1px solid white;
+}
+p{
+    text-indent: initial;
+    color: black;
+}
+body {
+    background-color: lavenderblush;
+    font:20px Georgia, verdana
+}
