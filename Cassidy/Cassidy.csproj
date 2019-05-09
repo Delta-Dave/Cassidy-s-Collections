@@ -106,6 +106,8 @@
     <Content Include="Images\earth.JPG" />
     <Content Include="Images\ice.JPG" />
     <Content Include="Images\jack_and_jill.JPG" />
+    <Content Include="Images\landingpage.JPG" />
+    <Content Include="Images\logo1.png" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
