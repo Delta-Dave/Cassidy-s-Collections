@@ -8,17 +8,88 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:Label ID = "UserID" runat = "server"></asp:Label>
-
-    <div class="products">
-        <div class="product">
-            <asp:Image ID="Image1" runat="server" ImageUrl="#" Width="200px" />
-            <br />
-            This is a Product Label
-
-        </div>
-            
+    <div>
+        <h1>Best Sellers</h1>
+        <p>
+        </p>
+    <link rel="stylesheet" href="products.css"/>
     </div>
+       <asp:Table id="Table1" runat="server"
+        CellPadding="10"
+        HorizontalAlign="Center">
+        <asp:TableRow>
+            <asp:TableCell>
+                <asp:Image ID="Image1" runat="server" Height="223px" Width="239px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </asp:TableCell>
+            <asp:TableCell>
+                 <asp:Image ID="Image2" runat="server" Height="223px" Width="239px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </asp:TableCell>
+            <asp:TableCell>
+                 <asp:Image ID="Image3" runat="server" Height="223px" Width="239px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </asp:TableCell>
+            <asp:TableCell>
+                 <asp:Image ID="Image4" runat="server" Height="223px" Width="239px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </asp:TableCell>
+            <asp:TableCell>
+                <asp:Image ID="Image5" runat="server" Height="223px" Width="239px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </asp:TableCell>
+            <asp:TableCell>
+                <asp:Image ID="Image6" runat="server" Height="223px" Width="239px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </asp:TableCell>
+        </asp:TableRow>
+        <asp:TableRow>
+            <asp:TableCell>
+                <asp:Label ID="Name1" runat="server" Text="Label"></asp:Label>
+            </asp:TableCell>
+            <asp:TableCell>
+                <asp:Label ID="Name2" runat="server" Text="Label"></asp:Label>
+            </asp:TableCell>
+            <asp:TableCell>
+                <asp:Label ID="Name3" runat="server" Text="Label"></asp:Label>
+            </asp:TableCell>
+            <asp:TableCell>
+                <asp:Label ID="Name4" runat="server" Text="Label"></asp:Label>
+            </asp:TableCell>
+            <asp:TableCell>
+                <asp:Label ID="Name5" runat="server" Text="Label"></asp:Label>
+            </asp:TableCell>
+            <asp:TableCell>
+                <asp:Label ID="Name6" runat="server" Text="Label"></asp:Label>
+            </asp:TableCell>
+           
+        </asp:TableRow>
+           <asp:TableRow>
+            <asp:TableCell>
+                <asp:Label ID="Desc1" runat="server" Text="Label"></asp:Label>
+            </asp:TableCell>
+            <asp:TableCell>
+                <asp:Label ID="Desc2" runat="server" Text="Label"></asp:Label>
+            </asp:TableCell>
+            <asp:TableCell>
+                <asp:Label ID="Desc3" runat="server" Text="Label"></asp:Label>
+            </asp:TableCell>
+            <asp:TableCell>
+                <asp:Label ID="Desc4" runat="server" Text="Label"></asp:Label>
+            </asp:TableCell>
+            <asp:TableCell>
+                <asp:Label ID="Desc5" runat="server" Text="Label"></asp:Label>
+            </asp:TableCell>
+            <asp:TableCell>
+                <asp:Label ID="Desc6" runat="server" Text="Label"></asp:Label>
+            </asp:TableCell>
+           
+        </asp:TableRow>
+    </asp:Table>
+       
+        <p>
+        </p>
+       
     </form>
 </body>
 </html>
