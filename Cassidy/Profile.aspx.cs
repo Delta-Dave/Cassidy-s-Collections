@@ -15,7 +15,7 @@ namespace Cassidy
 
         protected void PopulatePage()
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["home"].ConnectionString);
             con.Open();
             SqlCommand cmd = new SqlCommand("select * from Customers where CustomerID = @userid", con);
             cmd.Parameters.AddWithValue("@userid", 1);
@@ -30,6 +30,9 @@ namespace Cassidy
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["UserID"] == null)
+                Response.Redirect("Login.aspx");
+
             PopulatePage();
         }
     }

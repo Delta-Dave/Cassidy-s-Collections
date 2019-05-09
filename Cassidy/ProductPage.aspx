@@ -8,9 +8,11 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <asp:Label ID = "UserID" runat = "server"></asp:Label>
+
     <div class="products">
         <div class="product">
-            <asp:Image ID="Image1" runat="server" ImageUrl="2018-12-31.jpg" Width="200px" />
+            <asp:Image ID="Image1" runat="server" ImageUrl="#" Width="200px" />
             <br />
             This is a Product Label
 
