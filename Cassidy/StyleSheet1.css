@@ -5,7 +5,12 @@
     background-color: mediumpurple;
     border: 1px solid white;
 }
+h3 {
+	font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+	color: mediumpurple;
+}
 p{
+	font: 15px Georgia;
     text-indent: initial;
     color: black;
 }

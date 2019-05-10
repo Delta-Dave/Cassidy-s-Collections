@@ -10,8 +10,6 @@
     <form id="form1" runat="server">
     <div>
         <h1>Best Sellers</h1>
-        <p>
-        </p>
     <link rel="stylesheet" href="products.css"/>
     </div>
        <asp:Table id="Table1" runat="server"
