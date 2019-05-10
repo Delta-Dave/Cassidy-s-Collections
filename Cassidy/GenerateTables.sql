@@ -40,8 +40,8 @@ CREATE TABLE [dbo].[OrderItem] (
     CONSTRAINT [FK_OrderID] FOREIGN KEY ([OrderID]) REFERENCES [Orders]([OrderID])
 );
 GO
-INSERT INTO Products (ProductName, ProductPrice, ImagePath)
-VALUES ('Delta', 25, '.\Images\delta.jpg'), ('Jack and Jill', 25, '.\Images\jack_and_jill.jpg'), 
-('AKA', 25, '.\Images\2018-12-31.jpg'), ('Ice', 25, '.\Images\ice.jpg'), 
-('Earth', 25, '.\Images\earth.jpg'), ('placeholder', 25, '.\Images\2018-12-31.jpg');
+INSERT INTO Products (ProductName, ProductPrice, ImagePath, ProductDesc)
+VALUES ('Delta', 25, '.\Images\delta.jpg', 'This spakling red and white bracelet is perfect for any Delta Soror'), ('Jack and Jill', 25, '.\Images\jack_and_jill.jpg', 'This blue and pink bracelet is a necessity for all Jack and Jill members.'), 
+('AKA', 25, '.\Images\2018-12-31.jpg', 'This pink and green AKA inspired bracelet is sure to shine on any sorors wrist'), ('Ice', 25, '.\Images\ice.jpg', 'These beautiful blue bracelets are all unique in their own way. None of th beads are the exact same and that makes tehem all the more unique.'), 
+('Earth', 25, '.\Images\earth.jpg', 'This green and earth toned bracelet is the perfect gift for your friend with a green thumb.'), ('placeholder', 25, '.\Images\2018-12-31.jpg', 'nothing rn');
 GO
