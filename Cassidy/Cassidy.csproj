@@ -99,8 +99,7 @@
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
     <Content Include="GenerateTables.sql" />
-    <Content Include="HtmlPage1.html" />
-    <Content Include="HtmlPage2.html" />
+    <Content Include="LandingPage.html" />
     <Content Include="Images\2018-12-31.jpg" />
     <Content Include="Images\delta.JPG" />
     <Content Include="Images\earth.JPG" />
