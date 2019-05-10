@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    
+		<nav> <a href="LandingPage.html">Home</a><a href="ProductPage.aspx">Products</a> </nav>
 		<h1>Login</h1>
     &nbsp; User Name:&nbsp;
         <asp:TextBox ID="UserNameTB" runat="server"></asp:TextBox>

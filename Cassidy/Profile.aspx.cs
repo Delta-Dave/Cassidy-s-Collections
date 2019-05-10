@@ -18,7 +18,7 @@ namespace Cassidy
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
             con.Open();
             SqlCommand cmd = new SqlCommand("select * from Customers where CustomerID = @userid", con);
-            cmd.Parameters.AddWithValue("@userid", 1);
+            cmd.Parameters.AddWithValue("@userid", Session["UserID"]);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);

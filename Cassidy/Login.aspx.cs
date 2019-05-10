@@ -14,7 +14,10 @@ namespace Cassidy
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+			if (Session["UserID"] != null)
+			{
+				Response.Redirect("ProfilePage.aspx");
+			}
         }
 
         protected void LoginBtn_Click(object sender, EventArgs e)
