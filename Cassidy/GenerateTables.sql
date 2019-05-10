@@ -45,3 +45,6 @@ VALUES ('Delta', 25, '.\Images\delta.jpg'), ('Jack and Jill', 25, '.\Images\jack
 ('AKA', 25, '.\Images\2018-12-31.jpg'), ('Ice', 25, '.\Images\ice.jpg'), 
 ('Earth', 25, '.\Images\earth.jpg'), ('placeholder', 25, '.\Images\2018-12-31.jpg');
 GO
+INSERT INTO Customers (LastName, FirstName, Username, Password, Address)
+VALUES ('Benton', 'David', 'dbento', 'password', '1800 Pineville-Matthews Road Charlotte, NC 28270');
+GO
