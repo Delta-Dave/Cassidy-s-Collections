@@ -45,3 +45,6 @@ VALUES ('Delta', 25, '.\Images\delta.jpg', 'This spakling red and white bracelet
 ('AKA', 25, '.\Images\2018-12-31.jpg', 'This pink and green AKA inspired bracelet is sure to shine on any sorors wrist'), ('Ice', 25, '.\Images\ice.jpg', 'These beautiful blue bracelets are all unique in their own way. None of th beads are the exact same and that makes tehem all the more unique.'), 
 ('Earth', 25, '.\Images\earth.jpg', 'This green and earth toned bracelet is the perfect gift for your friend with a green thumb.'), ('placeholder', 25, '.\Images\2018-12-31.jpg', 'nothing rn');
 GO
+INSERT INTO Customers (LastName, FirstName, Username, Password, Address)
+VALUES ('Benton', 'David', 'dbento', 'password', '1800 Pineville-Matthews Road Charlotte, NC 28270');
+GO
