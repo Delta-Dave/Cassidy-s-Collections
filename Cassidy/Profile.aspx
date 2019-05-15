@@ -20,6 +20,8 @@
         <br />
         <asp:Label ID="Date" runat="server" Text="Here's a date"></asp:Label>
         
+        <br />
+        <asp:Button ID="LogOut" runat="server"></asp:Button>
     </div>
     </form>
 </body>
