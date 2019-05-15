@@ -35,5 +35,11 @@ namespace Cassidy
 
             PopulatePage();
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Session["UserID"] = null;
+            Response.Redirect("Login.aspx");
+        }
     }
 }
