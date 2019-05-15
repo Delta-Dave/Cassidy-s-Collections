@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-		<nav> <a href="LandingPage.html">Home</a><a href="ProductPage.aspx">Products</a> </nav>
+		<nav> <a href="LandingPage.aspx">Home</a><a href="ProductPage.aspx">Products</a> </nav>
 		<h1>Login</h1>
     &nbsp; User Name:&nbsp;
         <asp:TextBox ID="UserNameTB" runat="server"></asp:TextBox>
@@ -22,8 +22,6 @@
     
     </div>
         <asp:Label ID="UserID" runat="server" Text="User ID: "></asp:Label>
-                <br />
-        <asp:Button ID="LogOutBtn" runat="server" OnClick="Button1_Click" Text="Log Out" />
     </form>
 
 </body>

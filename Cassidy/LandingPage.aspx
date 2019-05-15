@@ -11,7 +11,7 @@
 <body>
     <nav>
         <a href="ProductPage.aspx">Products</a>
-        <a href="Login.aspx">Login</a>
+        <a href="Login.aspx"><asp:Label ID="LoginStatus" runat="server"></asp:Label></a>
     </nav>
     <h1> Cassidy's Collections</h1>
     <img src=".\Images\logo1.png" alt="logo1" style="float:left; height: 53px; width: 65px;" />

@@ -11,7 +11,14 @@ namespace Cassidy
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["UserID"] != null)
+            {
+                LoginStatus.Text = ""+Session["UserID"];
+            }
+            else
+            {
+                LoginStatus.Text = "Login";
+            }
         }
     }
 }
