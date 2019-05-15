@@ -22,6 +22,9 @@
     
     </div>
         <asp:Label ID="UserID" runat="server" Text="User ID: "></asp:Label>
+                <br />
+        <asp:Button ID="LogOutBtn" runat="server" OnClick="Button1_Click" Text="Log Out" />
     </form>
+
 </body>
 </html>
