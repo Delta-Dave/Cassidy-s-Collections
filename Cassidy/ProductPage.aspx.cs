@@ -19,7 +19,7 @@ namespace Cassidy
             Label[] names = { Name1, Name2, Name3, Name4, Name5, Name6 };
             Label[] descs = { Desc1, Desc2, Desc3, Desc4, Desc5, Desc6 };
 
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["sananda"].ConnectionString);
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
             con.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Products", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -29,7 +29,7 @@ namespace Cassidy
             for (int i = 0; i < pics.Length; i++)
             {
                 pics[i].ImageUrl = dt.Rows[i].Field<String>(4);
-                names[i].Text = dt.Rows[i].Field<String>(1) + "\t\t $" + Math.Round(dt.Rows[i].Field<Decimal>(2), 2);
+                names[i].Text = dt.Rows[i].Field<String>(1) + "     $" + Math.Round(dt.Rows[i].Field<Decimal>(2), 2);
                 descs[i].Text = dt.Rows[i].Field<String>(3);
             }
 
