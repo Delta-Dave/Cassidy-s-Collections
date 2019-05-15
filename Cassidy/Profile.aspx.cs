@@ -15,7 +15,7 @@ namespace Cassidy
 
         protected void PopulatePage()
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["cameryn"].ConnectionString);
             con.Open();
             SqlCommand cmd = new SqlCommand("select * from Customers where CustomerID = @userid", con);
             cmd.Parameters.AddWithValue("@userid", Session["UserID"]);

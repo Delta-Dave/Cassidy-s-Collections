@@ -48,3 +48,11 @@ GO
 INSERT INTO Customers (LastName, FirstName, Username, Password, Address)
 VALUES ('Benton', 'David', 'dbento', 'password', '1800 Pineville-Matthews Road Charlotte, NC 28270');
 GO
+
+INSERT INTO Orders (CustomerID, SaleAmount)
+VAlUES (1,25);
+GO
+
+INSERT INTO OrderItem ( Quantity, ProductID, OrderID)
+VALUES (20, 1, 1);
+GO
