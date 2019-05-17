@@ -9,6 +9,10 @@
 <body>
     <form id="form1" runat="server">
     <div>
+    <nav>
+        <a href="Login.aspx">Login</a>
+        <a href="LandingPage.aspx">Home</a>
+    </nav>
         <h1>Best Sellers</h1>
     <link rel="stylesheet" href="products.css"/>
     </div>
