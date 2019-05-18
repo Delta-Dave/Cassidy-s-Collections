@@ -9,11 +9,26 @@ h3 {
 	font-family: 'Brush Script MT', 'Brush Script Std', cursive;
 	color: mediumpurple;
 }
+nav li{
+    display: inline;
+    text-decoration: none;
+}
+nav ul{
+    display: inline;
+}
 p{
 	font: 15px Georgia;
     text-indent: initial;
     color: black;
  
+}
+.profile{
+    margin-left: 25%;
+    margin-right: 25%;
+    justify-content: center;
+    border: 6px solid #5D5C61;
+    padding: 7px;
+    width: 50%;
 }
 body {
     background-color: lavenderblush;
