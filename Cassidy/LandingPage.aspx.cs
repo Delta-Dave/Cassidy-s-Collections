@@ -13,7 +13,7 @@ namespace Cassidy
         {
             if (Session["UserID"] != null)
             {
-                LoginStatus.Text = ""+Session["UserID"];
+                LoginStatus.Text = ""+Session["UserID"]+"'s Profile";
             }
             else
             {

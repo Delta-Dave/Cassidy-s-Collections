@@ -9,21 +9,34 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+
+        <nav>
+            <a href="LandingPage.aspx">Home</a>
+            <a href="ProductPage.aspx">Products</a>
+		</nav>
         <h1>Your Profile</h1>
+    <div class="profile">
+        
+        User ID:
         <asp:Label ID="UserID" runat="server" Text="Please Never See this"></asp:Label>
         <br />
         <br />
-        <asp:Label ID="Name" runat="server" Text="First and Last Name goes here"></asp:Label>
+        Given Name:<asp:Label ID="Name" runat="server" Text="First and Last Name goes here"></asp:Label>
         <br />
+        Username:
         <asp:Label ID="Username" runat="server" Text="Username here"></asp:Label>
         <br />
         <br />
+        Date Joined:
         <asp:Label ID="Date" runat="server" Text="Here's a date"></asp:Label>
         
         
-    </div>
+        <br />
+        <br />
+        Order History:
+
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:home %>" SelectCommand="SELECT [OrderID] as [Order Number], [SaleAmount] as [Price] FROM [Orders] WHERE ([CustomerID] = @CustomerID)">
+
 
             <SelectParameters>
                 <asp:SessionParameter Name="CustomerID" SessionField="UserID" Type="Int32" />
@@ -47,6 +60,7 @@
 
         <br />
         <asp:Button ID="LogOut" runat="server" OnClick="Button1_Click" Text="Log Out" />
+        </div>
     </form>
 </body>
 </html>
