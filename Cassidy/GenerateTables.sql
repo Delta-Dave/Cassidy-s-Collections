@@ -45,14 +45,19 @@ VALUES ('Delta', 25, '.\Images\delta.jpg', 'This spakling red and white bracelet
 ('AKA', 25, '.\Images\2018-12-31.jpg', 'This pink and green AKA inspired bracelet is sure to shine on any sorors wrist'), ('Ice', 25, '.\Images\ice.jpg', 'These beautiful blue bracelets are all unique in their own way. None of th beads are the exact same and that makes tehem all the more unique.'), 
 ('Earth', 25, '.\Images\earth.jpg', 'This green and earth toned bracelet is the perfect gift for your friend with a green thumb.'), ('placeholder', 25, '.\Images\2018-12-31.jpg', 'nothing rn');
 GO
-INSERT INTO Customers (LastName, FirstName, Username, Password, Address)
-VALUES ('Benton', 'David', 'dbento', 'password', '1800 Pineville-Matthews Road Charlotte, NC 28270');
+INSERT INTO Customers (FirstName, LastName, Username, Password, Address)
+VALUES ('David', 'Benton', 'dbento', 'password', '1800 Pineville-Matthews Road Charlotte, NC 28270'),
+('Carol', 'Patrick', 'cpatrick', 'password', '2698 Emerson Road Shreveport, LA 71115'), 
+('Ellen', 'Libby', 'elibby', 'password', '4432 South Street Lynchburg, VA 24504' ),
+('Brenda','Kent','bkent','password','1959 Burwell Heights Road Beaumont, TX 77701'),
+('Laura','Rhodes','lrhodes','password','2059 Burning Memory Lane Philadelphia, PA 19135'),
+('Karen','Mayes','kmayes','password','857 Angus Road New York, NY 10281');
 GO
 
 INSERT INTO Orders (CustomerID, SaleAmount)
-VAlUES (1,25);
+VAlUES (1,25), (2,50), (3,75), (4,100), (5,25), (6,50);
 GO
 
 INSERT INTO OrderItem ( Quantity, ProductID, OrderID)
-VALUES (20, 1, 1);
-GO
+VALUES (1, 1, 1), (2, 2, 2), (3, 3, 3), (4, 4, 4), (2, 5, 5), (2,3,6);
+GO 
