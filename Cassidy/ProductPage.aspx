@@ -12,14 +12,11 @@
 
     <nav>
         <a href="LandingPage.aspx">Home</a>
-        <a href="Login.aspx"><asp:Label ID="LoginStatus" runat="server"></asp:Label></a>
+        <a href="Login.aspx" style="float:right;"><asp:Label ID="LoginStatus" runat="server"></asp:Label></a>
     </nav>
 
     <div>
-    <nav>
-        <a href="Login.aspx">Login</a>
-        <a href="LandingPage.aspx">Home</a>
-    </nav>
+    
         <h1>Best Sellers</h1>
     
     </div>
