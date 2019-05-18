@@ -20,6 +20,7 @@ namespace Cassidy
             Label[] descs = { Desc1, Desc2, Desc3, Desc4, Desc5, Desc6 };
 
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
+
             con.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Products", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
