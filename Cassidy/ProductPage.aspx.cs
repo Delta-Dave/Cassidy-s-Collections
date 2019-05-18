@@ -19,7 +19,8 @@ namespace Cassidy
             Label[] names = { Name1, Name2, Name3, Name4, Name5, Name6 };
             Label[] descs = { Desc1, Desc2, Desc3, Desc4, Desc5, Desc6 };
 
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["cameryn"].ConnectionString);
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
+
             con.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Products", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -39,7 +40,14 @@ namespace Cassidy
         protected void Page_Load(object sender, EventArgs e)
         {
             LoadData();
-            
+            if (Session["UserID"] != null)
+            {
+                LoginStatus.Text = "" + Session["UserID"];
+            }
+            else
+            {
+                LoginStatus.Text = "Login";
+            }
         }
 
         
