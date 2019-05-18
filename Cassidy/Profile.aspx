@@ -35,7 +35,7 @@
         <br />
         Order History:
 
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:home %>" SelectCommand="SELECT [OrderID] as [Order Number], [SaleAmount] as [Price] FROM [Orders] WHERE ([CustomerID] = @CustomerID)">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:sananda %>" SelectCommand="SELECT [OrderID] as [Order Number], [SaleAmount] as [Price] FROM [Orders] WHERE ([CustomerID] = @CustomerID)">
 
 
             <SelectParameters>
