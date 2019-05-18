@@ -22,10 +22,13 @@ p{
     color: black;
  
 }
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.profile{
+    margin-left: 25%;
+    margin-right: 25%;
+    justify-content: center;
+    border: 6px solid #5D5C61;
+    padding: 7px;
+    width: 50%;
 }
 body {
     background-color: lavenderblush;
