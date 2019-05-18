@@ -9,11 +9,23 @@ h3 {
 	font-family: 'Brush Script MT', 'Brush Script Std', cursive;
 	color: mediumpurple;
 }
+nav li{
+    display: inline;
+    text-decoration: none;
+}
+nav ul{
+    display: inline;
+}
 p{
 	font: 15px Georgia;
     text-indent: initial;
     color: black;
  
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 body {
     background-color: lavenderblush;

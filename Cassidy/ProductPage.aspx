@@ -16,6 +16,10 @@
     </nav>
 
     <div>
+    <nav>
+        <a href="Login.aspx">Login</a>
+        <a href="LandingPage.aspx">Home</a>
+    </nav>
         <h1>Best Sellers</h1>
     
     </div>
