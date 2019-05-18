@@ -13,6 +13,14 @@ body {
     background-color: lavenderblush;
     font:20px Georgia, verdana
 }
+
+nav li{
+    display: inline;
+    text-decoration: none;
+}
+nav ul {
+    display: inline;
+}
 .products {
     margin-left: 20px;
     margin-right: 20px;
