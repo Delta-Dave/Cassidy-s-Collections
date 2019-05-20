@@ -13,11 +13,11 @@
 </head>
 <body>
     <nav>
-        <img src=".\Images\logo1.png" alt="logo1" style="float:left" height: "39" width: "50" />
-        <a href="ProductPage.aspx">Products</a>
+        <a href="ProductPage.aspx" style="float:left;">Products</a>
+        <img src=".\Images\navlogo.png" alt="logo1" style="padding-left:41%;"/>
         <a href="Login.aspx" style="float: right;"><asp:Label ID="LoginStatus" runat="server"></asp:Label></a>
     </nav>
-    <h1> Cassidy's Collections</h1>
+    <h1>Cassidy's Collections</h1>
     <p style="float:left">
         Hello! Welcome to Cassidy's Collections Website. My name is Cassidy Reaves,
         CEO and creator of Cassidy's Collections. If you would like to contact me, please refer to the information below
@@ -25,12 +25,12 @@
     <br />
     <img src=".\Images\landingpage.jpg" alt="landingpage" style="width:33%;margin-left: 33%;margin-right: 33%"/>
 
-    
+    <br />
     <div style="display:inline-flex;">
-        <h3 style="margin-right:5px;">Facebook: </h3>
-        <a href="https://www.facebook.com/cassidyscollections/" style="padding-top: 19px;margin-right:30px;">Cassidy's Collection</a>
-        <h3 style="margin-right:5px;"">Email: </h3>
-        <a href="mailto:cassidycollections@gmail.com?subject=From%20Website" style="padding-top: 19px;">cassidycollections@gmail.com</a>
+        <h3 style="margin-right:5px; margin-top:80px" >Facebook: </h3>
+        <a href="https://www.facebook.com/cassidyscollections/" style="padding-top: 19px;margin-right:30px; margin-top:70px">Cassidy's Collection</a>
+        <h3 style="margin-right:5px;margin-top:80px">Email: </h3>
+        <a href="mailto:cassidycollections@gmail.com?subject=From%20Website" style="padding-top: 19px; margin-top:70px">cassidycollections@gmail.com</a>
     </div>  
 </body>
 </html>
