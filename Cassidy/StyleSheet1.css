@@ -1,13 +1,17 @@
 ﻿h1 {
-    font-family:Brush Script MT, Brush Script Std, cursive;
+    font-family:'Brush Script MT', 'Brush Script Std', cursive;
     text-align: center;
     color: white;
     background-color: mediumpurple;
     border: 1px solid white;
 }
 h3 {
-	font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+	font-family:'Brush Script MT', 'Brush Script Std', cursive;
+    font-size:30px;
 	color: mediumpurple;
+}
+nav{
+    margin-bottom:-50px;
 }
 nav li{
     display: inline;
@@ -17,7 +21,7 @@ nav ul{
     display: inline;
 }
 p{
-	font: 15px Georgia;
+	font: Georgia;
     text-indent: initial;
     color: black;
  

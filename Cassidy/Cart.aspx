@@ -1,0 +1,42 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cart.aspx.cs" Inherits="Cassidy.Cart" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Cart</title>
+     <link rel="stylesheet" href="stylesheet1.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    <h1>Shopping Cart</h1>
+    </div>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" DataKeyNames="ID" DataSourceID="SqlDataSource1" GridLines="None">
+            <Columns>
+                <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
+                <asp:BoundField DataField="ProductID" HeaderText="ProductID" SortExpression="ProductID" />
+            </Columns>
+            <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
+            <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
+            <PagerStyle BackColor="#C6C3C6" ForeColor="Black" HorizontalAlign="Right" />
+            <RowStyle BackColor="#DEDFDE" ForeColor="Black" />
+            <SelectedRowStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#594B9C" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#33276A" />
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:sananda %>" SelectCommand="SELECT [ID], [ProductID] FROM [OrderItem] WHERE ([OrderID] = @OrderID)">
+            <SelectParameters>
+                <asp:SessionParameter Name="OrderID" SessionField="OrderID" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="ProductID" DataValueField="ID">
+        </asp:DropDownList>
+        <asp:Button ID="Removebtn" runat="server" Text="Remove" />
+        <br />
+        <asp:Button ID="CompleteOrderbtn" runat="server" Text="Complete Order" />
+    </form>
+</body>
+</html>
