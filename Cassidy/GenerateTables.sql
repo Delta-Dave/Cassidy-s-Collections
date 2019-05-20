@@ -25,7 +25,8 @@ GO
 CREATE TABLE [dbo].[Orders] (
     [OrderID]    INT	NOT NULL 	IDENTITY (1, 1),
     [CustomerID] INT 	NOT NULL,
-    [SaleAmount] MONEY 	NOT NULL,
+    [SaleAmount] MONEY 	NULL,
+	[IsComplete] BIT	NOT NULL	DEFAULT (0),
     PRIMARY KEY CLUSTERED ([OrderID] ASC),
     CONSTRAINT [FK_CustomerID] FOREIGN KEY ([CustomerID]) REFERENCES [dbo].[Customers] ([CustomerID]),
 );
@@ -54,8 +55,8 @@ VALUES ('David', 'Benton', 'dbento', 'password', '1800 Pineville-Matthews Road C
 ('Karen','Mayes','kmayes','password','857 Angus Road New York, NY 10281');
 GO
 
-INSERT INTO Orders (CustomerID, SaleAmount)
-VAlUES (1,25), (2,50), (3,75), (4,100), (5,25), (6,50);
+INSERT INTO Orders (CustomerID, SaleAmount, IsComplete)
+VAlUES (1,25,1), (2,50,1), (3,75,1), (4,100,1), (5,25,1), (6,50,1);
 GO
 
 INSERT INTO OrderItem ( Quantity, ProductID, OrderID)
