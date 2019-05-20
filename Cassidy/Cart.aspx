@@ -27,7 +27,7 @@
             <SortedDescendingCellStyle BackColor="#CAC9C9" />
             <SortedDescendingHeaderStyle BackColor="#33276A" />
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:home %>" SelectCommand="SELECT [ID], [ProductName] FROM [OrderItem] 
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbconnection %>" SelectCommand="SELECT [ID], [ProductName] FROM [OrderItem] 
 INNER JOIN Products ON OrderItem.ProductID = Products.ProductID
 WHERE ([OrderID] = @OrderID)">
             <SelectParameters>
