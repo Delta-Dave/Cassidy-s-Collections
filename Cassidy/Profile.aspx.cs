@@ -16,7 +16,7 @@ namespace Cassidy
         protected void PopulatePage()
         {
 
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["home"].ConnectionString);
 
             con.Open();
             SqlCommand cmd = new SqlCommand("select * from Customers where CustomerID = @userid", con);
@@ -28,6 +28,17 @@ namespace Cassidy
             Name.Text = dt.Rows[0].Field<String>(2) +" "+ dt.Rows[0].Field<String>(1);
             Username.Text = dt.Rows[0].Field<String>(3);
             Date.Text = "" + dt.Rows[0].Field<DateTime>(5);
+
+            cmd = new SqlCommand("SELECT * FROM Orders WHERE IsComplete = 0", con);
+            da = new SqlDataAdapter(cmd);
+            dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count != 0)
+            {
+                Session.Add("OrderID", dt.Rows[0].Field<int>(0));
+            }
+
+            con.Close();
         }
 
         protected void Page_Load(object sender, EventArgs e)
