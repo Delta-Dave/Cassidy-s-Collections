@@ -21,7 +21,7 @@ namespace Cassidy
 
         protected void CompleteOrderbtn_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["home"].ConnectionString);
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["sananda"].ConnectionString);
             con.Open();
 
             SqlCommand cmd = new SqlCommand("UPDATE Orders SET IsComplete = 1 WHERE OrderID = @id", con);
@@ -40,7 +40,7 @@ namespace Cassidy
 
         protected void Removebtn_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["home"].ConnectionString);
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["sananda"].ConnectionString);
             con.Open();
 
             SqlCommand cmd = new SqlCommand("DELETE FROM OrderItem WHERE ID = @id", con);
