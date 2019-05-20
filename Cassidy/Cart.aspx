@@ -15,7 +15,7 @@
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellPadding="3" CellSpacing="1" DataKeyNames="ID" DataSourceID="SqlDataSource1" GridLines="None">
             <Columns>
                 <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
-                <asp:BoundField DataField="ProductID" HeaderText="ProductID" SortExpression="ProductID" />
+                <asp:BoundField DataField="ProductName" HeaderText="ProductName" SortExpression="ProductName" />
             </Columns>
             <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
             <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
@@ -27,16 +27,18 @@
             <SortedDescendingCellStyle BackColor="#CAC9C9" />
             <SortedDescendingHeaderStyle BackColor="#33276A" />
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:sananda %>" SelectCommand="SELECT [ID], [ProductID] FROM [OrderItem] WHERE ([OrderID] = @OrderID)">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:home %>" SelectCommand="SELECT [ID], [ProductName] FROM [OrderItem] 
+INNER JOIN Products ON OrderItem.ProductID = Products.ProductID
+WHERE ([OrderID] = @OrderID)">
             <SelectParameters>
                 <asp:SessionParameter Name="OrderID" SessionField="OrderID" Type="Int32" />
             </SelectParameters>
         </asp:SqlDataSource>
-        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="ProductID" DataValueField="ID">
+        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="ProductName" DataValueField="ID">
         </asp:DropDownList>
-        <asp:Button ID="Removebtn" runat="server" Text="Remove" />
+        <asp:Button ID="Removebtn" runat="server" Text="Remove" OnClick="Removebtn_Click" />
         <br />
-        <asp:Button ID="CompleteOrderbtn" runat="server" Text="Complete Order" />
+        <asp:Button ID="CompleteOrderbtn" runat="server" Text="Complete Order" OnClick="CompleteOrderbtn_Click" />
     </form>
 </body>
 </html>
