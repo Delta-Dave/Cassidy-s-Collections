@@ -85,7 +85,7 @@ namespace Cassidy
                     break;
             }
 
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["home"].ConnectionString);
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["cameryn"].ConnectionString);
 
             con.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Orders WHERE IsComplete = 0", con);
