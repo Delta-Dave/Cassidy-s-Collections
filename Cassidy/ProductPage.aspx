@@ -24,33 +24,45 @@
     <div class="products">
         <div class="product">
             <asp:Image ID="Image1" runat="server"  /> <br />
-            <asp:Label ID="Name1" runat="server" Text="Label"></asp:Label> <br />
+            <asp:Label ID="Name1" runat="server" Text="Label" Font-Bold="True"></asp:Label> <br />
             <asp:Label ID="Desc1" runat="server" Text="Label"></asp:Label>
+            <br />
+            <asp:Button ID="Button1" runat="server" Text="Add to Cart" OnClick="Add_to_Cart" />
         </div>
         <div class="product">
             <asp:Image ID="Image2" runat="server"  /> <br />
-            <asp:Label ID="Name2" runat="server" Text="Label"></asp:Label><br />
+            <asp:Label ID="Name2" runat="server" Text="Label" Font-Bold="True"></asp:Label><br />
             <asp:Label ID="Desc2" runat="server" Text="Label"></asp:Label>
+            <br />
+            <asp:Button ID="Button2" runat="server" Text="Add to Cart" OnClick="Add_to_Cart" />
         </div>
         <div class="product">
             <asp:Image ID="Image3" runat="server" /><br />
-            <asp:Label ID="Name3" runat="server" Text="Label"></asp:Label><br />
+            <asp:Label ID="Name3" runat="server" Text="Label" Font-Bold="True"></asp:Label><br />
             <asp:Label ID="Desc3" runat="server" Text="Label"></asp:Label>
+            <br />
+            <asp:Button ID="Button3" runat="server" Text="Add to Cart" OnClick="Add_to_Cart" />
         </div>
         <div class="product">
             <asp:Image ID="Image4" runat="server" /><br />
-            <asp:Label ID="Name4" runat="server" Text="Label"></asp:Label><br />
+            <asp:Label ID="Name4" runat="server" Text="Label" Font-Bold="True"></asp:Label><br />
             <asp:Label ID="Desc4" runat="server" Text="Label"></asp:Label>
+            <br />
+            <asp:Button ID="Button4" runat="server" Text="Add to Cart" OnClick="Add_to_Cart" />
         </div>
         <div class="product">
             <asp:Image ID="Image5" runat="server" /><br />
-            <asp:Label ID="Name5" runat="server" Text="Label"></asp:Label><br />
+            <asp:Label ID="Name5" runat="server" Text="Label" Font-Bold="True"></asp:Label><br />
             <asp:Label ID="Desc5" runat="server" Text="Label"></asp:Label>
+            <br />
+            <asp:Button ID="Button5" runat="server" Text="Add to Cart" OnClick="Add_to_Cart" />
         </div>
         <div class="product">
             <asp:Image ID="Image6" runat="server" /><br />
-            <asp:Label ID="Name6" runat="server" Text="Label"></asp:Label><br />
+            <asp:Label ID="Name6" runat="server" Text="Label" Font-Bold="True"></asp:Label><br />
             <asp:Label ID="Desc6" runat="server" Text="Label"></asp:Label>
+            <br />
+            <asp:Button ID="Button6" runat="server" Text="Add to Cart" OnClick="Add_to_Cart" />
         </div>
     </div>
        
