@@ -13,11 +13,12 @@ namespace Cassidy
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlDataSource1.ConnectionString = (string)Session["conString"];
+
             if (Session["conString"] == null)
                 Response.Redirect("LandingPage.aspx");
             if (Session["UserID"]==null || Session["OrderID"]==null)
                 Response.Redirect("Login.aspx");
+            SqlDataSource1.ConnectionString = ConfigurationManager.ConnectionStrings[(string)Session["conString"]].ConnectionString;
         }
 
         protected void CompleteOrderbtn_Click(object sender, EventArgs e)
