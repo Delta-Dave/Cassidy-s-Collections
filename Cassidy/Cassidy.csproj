@@ -101,6 +101,7 @@
     <Content Include="Cart.aspx" />
     <Content Include="GenerateTables.sql" />
     <Content Include="Images\2018-12-31.jpg" />
+    <Content Include="Images\aka.jpg" />
     <Content Include="Images\delta.JPG" />
     <Content Include="Images\earth.JPG" />
     <Content Include="Images\favicon.png" />

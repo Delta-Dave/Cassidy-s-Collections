@@ -11,7 +11,7 @@ namespace Cassidy
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session.Add("conString", "dbconnection");
+            Session.Add("conString", "home");
             if (Session["UserID"] != null)
             {
                 LoginStatus.Text = ""+Session["UserID"]+"'s Profile";
