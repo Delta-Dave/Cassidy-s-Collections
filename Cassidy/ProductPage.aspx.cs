@@ -39,7 +39,7 @@ namespace Cassidy
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            LoadData();
+            
             if (Session["conString"] == null)
                 Response.Redirect("LandingPage.aspx");
 
@@ -47,6 +47,7 @@ namespace Cassidy
                 LoginStatus.Text = "" + Session["UserID"]+"'s Profile";
             else
                 LoginStatus.Text = "Login";
+            LoadData();
         }
 
         protected void Add_to_Cart(object sender, EventArgs e)
