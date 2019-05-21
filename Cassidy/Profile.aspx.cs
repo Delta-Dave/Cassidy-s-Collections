@@ -42,13 +42,12 @@ namespace Cassidy
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            SqlDataSource1.ConnectionString = (string)Session["conString"];
-
             if (Session["UserID"] == null)
                 Response.Redirect("Login.aspx");
             if (Session["conString"] == null)
                 Response.Redirect("LandingPage.aspx");
 
+            SqlDataSource1.ConnectionString = ConfigurationManager.ConnectionStrings[(string)Session["conString"]].ConnectionString;
             PopulatePage();
         }
 
