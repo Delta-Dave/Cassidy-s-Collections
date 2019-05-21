@@ -18,7 +18,7 @@ namespace Cassidy
             Image[] pics = { Image1, Image2, Image3, Image4, Image5, Image6 };
             Label[] names = { Name1, Name2, Name3, Name4, Name5, Name6 };
             Label[] descs = { Desc1, Desc2, Desc3, Desc4, Desc5, Desc6 };
-
+            
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings[(string)Session["conString"]].ConnectionString);
             con.Open();
             
@@ -39,7 +39,7 @@ namespace Cassidy
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            LoadData();
+            
             if (Session["conString"] == null)
                 Response.Redirect("LandingPage.aspx");
 
@@ -47,6 +47,7 @@ namespace Cassidy
                 LoginStatus.Text = "" + Session["UserID"]+"'s Profile";
             else
                 LoginStatus.Text = "Login";
+            LoadData();
         }
 
         protected void Add_to_Cart(object sender, EventArgs e)
