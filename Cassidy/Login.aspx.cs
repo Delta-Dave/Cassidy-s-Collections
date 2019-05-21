@@ -14,16 +14,16 @@ namespace Cassidy
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-			if (Session["UserID"] != null)
-			{
+            if (Session["conString"] == null)
+                Response.Redirect("LandingPage.aspx");
+            if (Session["UserID"] != null)
 				Response.Redirect("Profile.aspx");
-			}
         }
 
         protected void LoginBtn_Click(object sender, EventArgs e)
         {
 
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings[(string)Session["conString"]].ConnectionString);
             
             con.Open();
             SqlCommand cmd = new SqlCommand("select CustomerID from Customers where Username=@username and Password=@password", con);
