@@ -20,8 +20,8 @@ namespace Cassidy
             Label[] descs = { Desc1, Desc2, Desc3, Desc4, Desc5, Desc6 };
 
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings[(string)Session["conString"]].ConnectionString);
-
             con.Open();
+            
             SqlCommand cmd = new SqlCommand("SELECT * FROM Products", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -85,8 +85,8 @@ namespace Cassidy
             }
 
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings[(string)Session["conString"]].ConnectionString);
-
             con.Open();
+            
             SqlCommand cmd = new SqlCommand("SELECT * FROM Orders WHERE IsComplete = 0", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();

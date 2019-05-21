@@ -22,10 +22,9 @@ namespace Cassidy
 
         protected void LoginBtn_Click(object sender, EventArgs e)
         {
-
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings[(string)Session["conString"]].ConnectionString);
-            
             con.Open();
+            
             SqlCommand cmd = new SqlCommand("select CustomerID from Customers where Username=@username and Password=@password", con);
             cmd.Parameters.AddWithValue("@username", UserNameTB.Text);
             cmd.Parameters.AddWithValue("@password", PasswordTB.Text);
