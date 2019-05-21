@@ -13,6 +13,9 @@ body {
     background-color: lavenderblush;
     font:20px Georgia, verdana
 }
+nav{
+    margin-bottom:-50px;
+}
 
 nav li{
     display: inline;
