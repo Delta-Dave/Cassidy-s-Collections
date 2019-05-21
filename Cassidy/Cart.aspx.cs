@@ -13,15 +13,16 @@ namespace Cassidy
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            SqlDataSource1.ConnectionString = (string)Session["conString"];
+            if (Session["conString"] == null)
+                Response.Redirect("LandingPage.aspx");
             if (Session["UserID"]==null || Session["OrderID"]==null)
-            {
                 Response.Redirect("Login.aspx");
-            }
         }
 
         protected void CompleteOrderbtn_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["sananda"].ConnectionString);
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings[(string)Session["conString"]].ConnectionString);
             con.Open();
 
             SqlCommand cmd = new SqlCommand("UPDATE Orders SET IsComplete = 1 WHERE OrderID = @id", con);
@@ -40,7 +41,7 @@ namespace Cassidy
 
         protected void Removebtn_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["sananda"].ConnectionString);
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings[(string)Session["conString"]].ConnectionString);
             con.Open();
 
             SqlCommand cmd = new SqlCommand("DELETE FROM OrderItem WHERE ID = @id", con);
