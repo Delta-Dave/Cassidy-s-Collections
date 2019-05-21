@@ -34,8 +34,7 @@
         <br />
         <br />
         Order History:
-
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cameryn %>" SelectCommand="SELECT [OrderID] as [Order Number], [SaleAmount] as [Price] FROM [Orders] WHERE ([CustomerID] = @CustomerID)">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbconnection %>" SelectCommand="SELECT [OrderID] as [Order Number], [SaleAmount] as [Price] FROM [Orders] WHERE ([CustomerID] = @CustomerID)">
 
             <SelectParameters>
                 <asp:SessionParameter Name="CustomerID" SessionField="UserID" Type="Int32" />

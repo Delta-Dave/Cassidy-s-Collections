@@ -15,10 +15,9 @@ namespace Cassidy
 
         protected void PopulatePage()
         {
-
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["cameryn"].ConnectionString);
-
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings[(string)Session["conString"]].ConnectionString);
             con.Open();
+            
             SqlCommand cmd = new SqlCommand("select * from Customers where CustomerID = @userid", con);
             cmd.Parameters.AddWithValue("@userid", Session["UserID"]);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -43,8 +42,12 @@ namespace Cassidy
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            SqlDataSource1.ConnectionString = (string)Session["conString"];
+
             if (Session["UserID"] == null)
                 Response.Redirect("Login.aspx");
+            if (Session["conString"] == null)
+                Response.Redirect("LandingPage.aspx");
 
             PopulatePage();
         }

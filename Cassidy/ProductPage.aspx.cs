@@ -18,10 +18,10 @@ namespace Cassidy
             Image[] pics = { Image1, Image2, Image3, Image4, Image5, Image6 };
             Label[] names = { Name1, Name2, Name3, Name4, Name5, Name6 };
             Label[] descs = { Desc1, Desc2, Desc3, Desc4, Desc5, Desc6 };
-
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["cameryn"].ConnectionString);
-
+            
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings[(string)Session["conString"]].ConnectionString);
             con.Open();
+            
             SqlCommand cmd = new SqlCommand("SELECT * FROM Products", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -40,14 +40,13 @@ namespace Cassidy
         protected void Page_Load(object sender, EventArgs e)
         {
             LoadData();
+            if (Session["conString"] == null)
+                Response.Redirect("LandingPage.aspx");
+
             if (Session["UserID"] != null)
-            {
                 LoginStatus.Text = "" + Session["UserID"]+"'s Profile";
-            }
             else
-            {
                 LoginStatus.Text = "Login";
-            }
         }
 
         protected void Add_to_Cart(object sender, EventArgs e)
@@ -85,9 +84,9 @@ namespace Cassidy
                     break;
             }
 
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["cameryn"].ConnectionString);
-
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings[(string)Session["conString"]].ConnectionString);
             con.Open();
+            
             SqlCommand cmd = new SqlCommand("SELECT * FROM Orders WHERE IsComplete = 0", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
