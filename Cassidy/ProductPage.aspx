@@ -11,13 +11,14 @@
     <form id="form1" runat="server">
 
     <nav>
-        <a href="LandingPage.aspx">Home</a>
+        <a href="LandingPage.aspx" style="float:left;">Home</a>
+        <img src=".\Images\navlogo.png" alt="logo1" style="padding-left:41%;"/>
         <a href="Login.aspx" style="float:right;"><asp:Label ID="LoginStatus" runat="server"></asp:Label></a>
     </nav>
 
     <div>
     
-        <h1>Best Sellers</h1>
+        <h1>Best Sellers  </h1>
     
     </div>
 
