@@ -11,7 +11,7 @@ namespace Cassidy
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session.Add("conString", "home");
+            Session.Add("conString", "sananda");
 
             if (Session["UserID"] != null)
             {
