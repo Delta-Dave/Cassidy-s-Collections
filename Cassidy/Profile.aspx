@@ -12,8 +12,8 @@
 
         <nav>
             <a href="LandingPage.aspx" style="float:left;">Home</a>
-            <a href="ProductPage.aspx"style="float:left;">Products</a>
-            <img src=".\Images\navlogo.png" alt="logo1" style="padding-left:39%;"/>
+            <a href="ProductPage.aspx"style="float:left;">&nbsp Products</a>
+            <img src=".\Images\navlogo.png" alt="logo1" style="padding-left:38.5%;"/>
 		</nav>
         <h1>Your Profile</h1>
     <div class="profile">
