@@ -9,6 +9,12 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <nav>
+            <a href="LandingPage.aspx" style="float:left;">Home</a>
+            <a href="ProductPage.aspx"style="float:left;">&nbsp Products</a>
+            <a href="Profile.aspx" style="float:right;">Profile</a>
+            <img src=".\Images\navlogo.png" alt="logo1" style="padding-left:38.5%;"/>
+		</nav>
     <div>
     <h1>Shopping Cart</h1>
     </div>

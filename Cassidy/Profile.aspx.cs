@@ -56,5 +56,15 @@ namespace Cassidy
             Session["UserID"] = null;
             Response.Redirect("Login.aspx");
         }
+
+        protected void Cartbtn_Click(object sender, EventArgs e)
+        {
+            if (Session["OrderID"]== null)
+            {
+                Response.Write("<script>alert('You must select product purchase before viewing cart.');</script>");
+                return;
+            }
+            Response.Redirect("Cart.aspx");
+        }
     }
 }

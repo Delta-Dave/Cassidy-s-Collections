@@ -36,7 +36,7 @@ namespace Cassidy
             cmd.ExecuteNonQuery();
 
             con.Close();
-
+            Session["OrderID"] = null;
             Response.Redirect("Profile.aspx");
         }
 
